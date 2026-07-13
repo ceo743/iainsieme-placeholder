@@ -46,7 +46,7 @@ fbq('track', 'PageView');
       <a href="prezzi.html">Prezzi</a>
       <a href="sicurezza.html">Sicurezza</a>
       <a href="faq.html">FAQ</a>
-      <a href="prezzi.html#iscriviti" class="btn">Iscrivo mio figlio</a>
+      <a href="https://www.davidecaiazzo.it/offers/qzjqZZzy/checkout" class="btn">Iscrivo mio figlio</a>
     </nav>
   </div>
 </header>
@@ -117,7 +117,7 @@ fbq('track', 'PageView');
 </footer>
 <script>
 document.addEventListener('click', function(e){
-  var a = e.target.closest('a[href*="#iscriviti"]');
+  var a = e.target.closest('a[href*="#iscriviti"], a[href*="/offers/qzjqZZzy"]');
   if (a && typeof fbq === 'function') { fbq('track', 'InitiateCheckout'); }
 });
 </script>

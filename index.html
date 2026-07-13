@@ -44,7 +44,7 @@ fbq('track', 'PageView');
       <a href="prezzi.html">Prezzi</a>
       <a href="sicurezza.html">Sicurezza</a>
       <a href="faq.html">FAQ</a>
-      <a href="#iscriviti" class="btn">Iscrivo mio figlio</a>
+      <a href="https://www.davidecaiazzo.it/offers/qzjqZZzy/checkout" class="btn">Iscrivo mio figlio</a>
     </nav>
   </div>
 </header>
@@ -55,7 +55,7 @@ fbq('track', 'PageView');
     <h1>Tuo figlio userà l'intelligenza artificiale per tutta la vita.<br>Nessuno gli ha ancora spiegato come.</h1>
     <p class="sottotitolo container narrow">IAinsieme è il percorso online che insegna ai ragazzi a usare l'AI con la testa, non a subirla. Una lezione a settimana, dal vivo, in piccolo gruppo, con veri insegnanti.</p>
     <p class="sottotitolo container narrow"><strong>La prima classe parte martedì 29 settembre 2026 alle 18. 8 posti.</strong></p>
-    <a href="#iscriviti" class="btn grande">Iscrivo mio figlio al Livello 1</a>
+    <a href="https://www.davidecaiazzo.it/offers/qzjqZZzy/checkout" class="btn grande">Iscrivo mio figlio al Livello 1</a>
     <p class="microcopy"><span class="check">✓</span> Soddisfatti o rimborsati entro la prima lezione &nbsp;·&nbsp; <span class="check">✓</span> Massimo 8 ragazzi per classe</p>
     <div class="fiducia">
       <div><span class="icona">🛡️</span> Insegnante selezionato con certificato penale</div>
@@ -133,7 +133,7 @@ fbq('track', 'PageView');
         <span class="eta">DAGLI 11 AI 13 ANNI</span>
         <h3>Creare e capire</h3>
         <p>Prompting consapevole, come funziona davvero l'AI, primi ragionamenti su etica e limiti. Lezione da 50 o 60 minuti.</p>
-        <p style="margin-top:14px"><a href="#iscriviti" class="btn">Iscrivo mio figlio</a></p>
+        <p style="margin-top:14px"><a href="https://www.davidecaiazzo.it/offers/qzjqZZzy/checkout" class="btn">Iscrivo mio figlio</a></p>
       </div>
       <div class="card spenta">
         <span class="eta">DAI 14 AI 16 ANNI</span>
@@ -164,8 +164,8 @@ fbq('track', 'PageView');
     <h2>Il modo migliore per preparare tuo figlio al futuro è iniziare oggi a fargli le domande giuste.</h2>
     <p class="microcopy"><span class="check">✓</span> Soddisfatti o rimborsati entro la prima lezione &nbsp;·&nbsp; <span class="check">✓</span> Massimo 8 ragazzi per classe, i posti finiscono davvero</p>
     <div class="iscriviti-box" style="text-align:left">
-      <h3 style="text-align:center">Iscrivo mio figlio al Livello 1, fascia 11/13</h3>
-      <p style="font-size:.94rem;color:var(--ink-soft);text-align:center">La prima classe parte martedì 29 settembre 2026 alle 18 e ha 8 posti, le iscrizioni si chiudono al riempimento. Lascia i tuoi dati e ti ricontattiamo entro un giorno lavorativo per completare l'iscrizione. Il pagamento online arriva a breve.</p>
+      <h3 style="text-align:center">Preferisci parlarci prima? Lascia i tuoi dati</h3>
+      <p style="font-size:.94rem;color:var(--ink-soft);text-align:center">La prima classe parte martedì 29 settembre 2026 alle 18 e ha 8 posti, le iscrizioni si chiudono al riempimento. Se vuoi farci una domanda prima di iscrivere tuo figlio, lascia i tuoi dati e ti ricontattiamo entro un giorno lavorativo.</p>
       <form onsubmit="return inviaIscrizione(this)">
         <label for="nome">Il tuo nome</label>
         <input id="nome" name="nome" type="text" required placeholder="Nome e cognome del genitore">
@@ -216,7 +216,7 @@ function inviaIscrizione(f){
 </script>
 <script>
 document.addEventListener('click', function(e){
-  var a = e.target.closest('a[href*="#iscriviti"]');
+  var a = e.target.closest('a[href*="#iscriviti"], a[href*="/offers/qzjqZZzy"]');
   if (a && typeof fbq === 'function') { fbq('track', 'InitiateCheckout'); }
 });
 </script>
