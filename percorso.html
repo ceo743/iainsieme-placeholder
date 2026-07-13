@@ -15,6 +15,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '568941777677393');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=568941777677393&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
 </head>
 <body>
 
@@ -47,7 +62,7 @@
     <div class="centro"><h2>I 4 passi</h2></div>
     <div class="passi">
       <div class="passo"><strong>Scegli il livello e l'età</strong><p>Ti guidiamo noi se hai dubbi. Scrivici prima di iscriverti, rispondiamo sempre.</p></div>
-      <div class="passo"><strong>Assegniamo la classe</strong><p>Un piccolo gruppo di massimo 6 ragazzi della stessa fascia d'età, con un insegnante che li segue per tutto il percorso.</p></div>
+      <div class="passo"><strong>Assegniamo la classe</strong><p>Un piccolo gruppo di massimo 8 ragazzi della stessa fascia d'età, con un insegnante che li segue per tutto il percorso.</p></div>
       <div class="passo"><strong>Una lezione a settimana</strong><p>Dal vivo, online, mai registrata al posto della presenza. Sempre stesso giorno e stessa ora per tutte le 8 lezioni.</p></div>
       <div class="passo"><strong>Progetto e certificato</strong><p>A fine livello tuo figlio presenta il suo progetto alla classe e riceve l'attestato di completamento IAinsieme.</p></div>
     </div>
@@ -81,10 +96,11 @@
 <section class="alt">
   <div class="container narrow centro">
     <h2>Un orario che si incastra con la vostra settimana</h2>
-    <p>Le lezioni sono nel tardo pomeriggio dei giorni feriali o il sabato mattina, pensate per non pesare su scuola e compiti. Scegli lo slot al momento dell'iscrizione e resta lo stesso per tutte le 8 lezioni del livello. Nessuna app da controllare ogni settimana. Sapete già quando.</p>
+    <p>Le lezioni sono nel tardo pomeriggio o il sabato mattina, pensate per non pesare su scuola e compiti. Il giorno e l'ora restano gli stessi per tutte le 8 lezioni del livello. Nessuna app da controllare ogni settimana. Sapete già quando.</p>
+    <p style="margin-top:14px"><strong>Il calendario della prima classe, fascia 11/13.</strong> Si parte martedì 29 settembre 2026 alle 18. Una lezione a settimana, ogni martedì alle 18, per 8 lezioni. L'ultima è martedì 17 novembre 2026. Massimo 8 ragazzi, le iscrizioni sono aperte ora e si chiudono al riempimento della classe.</p>
     <div class="griglia due" style="max-width:640px;margin-left:auto;margin-right:auto">
-      <div class="card"><span class="icona">🗓️</span><h3>Giorni feriali</h3><p>Dalle 17 alle 18 oppure dalle 18 alle 19</p></div>
-      <div class="card"><span class="icona">☀️</span><h3>Sabato mattina</h3><p>Dalle 10 alle 11 oppure dalle 11 alle 12</p></div>
+      <div class="card"><span class="icona">🗓️</span><h3>Prima classe</h3><p>Ogni martedì alle 18, dal 29 settembre al 17 novembre 2026. 8 posti.</p></div>
+      <div class="card"><span class="icona">☀️</span><h3>Seconda classe</h3><p>Sabato 3 ottobre 2026 alle 10. Apre solo se la prima classe si riempie.</p></div>
     </div>
   </div>
 </section>
@@ -175,21 +191,19 @@
 <section class="cta-finale" id="iscriviti">
   <div class="container">
     <h2>Tutto chiaro? Il posto di tuo figlio ti aspetta.</h2>
-    <p class="microcopy"><span class="check">✓</span> Soddisfatti o rimborsati entro la prima lezione &nbsp;·&nbsp; <span class="check">✓</span> Massimo 6 ragazzi per classe</p>
+    <p class="microcopy"><span class="check">✓</span> Soddisfatti o rimborsati entro la prima lezione &nbsp;·&nbsp; <span class="check">✓</span> Massimo 8 ragazzi per classe</p>
     <div class="iscriviti-box" style="text-align:left">
       <h3 style="text-align:center">Iscrivo mio figlio al Livello 1, fascia 11/13</h3>
-      <p style="font-size:.94rem;color:var(--ink-soft);text-align:center">Lascia i tuoi dati e ti ricontattiamo entro un giorno lavorativo per completare l'iscrizione e scegliere l'orario. Il pagamento online arriva a breve.</p>
+      <p style="font-size:.94rem;color:var(--ink-soft);text-align:center">La prima classe parte martedì 29 settembre 2026 alle 18 e ha 8 posti, le iscrizioni si chiudono al riempimento. Lascia i tuoi dati e ti ricontattiamo entro un giorno lavorativo per completare l'iscrizione. Il pagamento online arriva a breve.</p>
       <form onsubmit="return inviaIscrizione(this)">
         <label for="nome">Il tuo nome</label>
         <input id="nome" name="nome" type="text" required placeholder="Nome e cognome del genitore">
         <label for="email">La tua email</label>
         <input id="email" name="email" type="email" required placeholder="nome@esempio.it">
-        <label for="slot">Orario preferito</label>
+        <label for="slot">La classe</label>
         <select id="slot" name="slot">
-          <option>Feriali dalle 17 alle 18</option>
-          <option>Feriali dalle 18 alle 19</option>
-          <option>Sabato dalle 10 alle 11</option>
-          <option>Sabato dalle 11 alle 12</option>
+          <option>Prima classe, ogni martedì alle 18, parte il 29 settembre 2026</option>
+          <option>Seconda classe, sabato alle 10, parte il 3 ottobre 2026 se la prima si riempie</option>
         </select>
         <button type="submit" class="btn grande">Iscrivo mio figlio</button>
       </form>
@@ -223,10 +237,17 @@
 
 <script>
 function inviaIscrizione(f){
-  var corpo = "Buongiorno, vorrei iscrivere mio figlio al Livello 1 di IAinsieme, fascia 11/13.%0D%0A%0D%0ANome genitore, " + encodeURIComponent(f.nome.value) + "%0D%0AEmail, " + encodeURIComponent(f.email.value) + "%0D%0AOrario preferito, " + encodeURIComponent(f.slot.value);
+  if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+  var corpo = "Buongiorno, vorrei iscrivere mio figlio al Livello 1 di IAinsieme, fascia 11/13.%0D%0A%0D%0ANome genitore, " + encodeURIComponent(f.nome.value) + "%0D%0AEmail, " + encodeURIComponent(f.email.value) + "%0D%0AClasse scelta, " + encodeURIComponent(f.slot.value);
   window.location.href = "mailto:academy@davidecaiazzo.it?subject=" + encodeURIComponent("Iscrizione IAinsieme Livello 1 fascia 11/13") + "&body=" + corpo;
   return false;
 }
+</script>
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target.closest('a[href*="#iscriviti"]');
+  if (a && typeof fbq === 'function') { fbq('track', 'InitiateCheckout'); }
+});
 </script>
 </body>
 </html>
