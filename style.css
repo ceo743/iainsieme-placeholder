@@ -259,3 +259,8 @@ footer .legale { grid-column: 1 / -1; border-top: 1px solid #445667; margin-top:
   .hero { padding: 48px 0 40px; }
   details.lezione .corpo { padding-left: 20px; }
 }
+
+/* Consenso privacy form */
+.consenso { display: flex; gap: 10px; align-items: flex-start; margin-top: 18px; font-weight: 500; font-size: .88rem; line-height: 1.5; color: var(--ink-soft); cursor: pointer; }
+.consenso input { width: auto; margin-top: 3px; flex-shrink: 0; transform: scale(1.3); accent-color: var(--cta); }
+.consenso a { display: inline; text-decoration: underline; color: var(--brand); }
