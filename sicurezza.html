@@ -65,7 +65,7 @@ fbq('track', 'PageView');
       <div class="regola"><span class="spunta">✓</span><div><strong>Ogni lezione viene registrata</strong><p>La registrazione serve solo alla sicurezza del minore e al controllo della qualità didattica. È conservata per un tempo limitato e dichiarato, accessibile solo a DC Academy e al genitore che la richiede. Mai ad altri genitori o a terzi.</p></div></div>
       <div class="regola"><span class="spunta">✓</span><div><strong>Zero contatti fuori dal canale ufficiale</strong><p>Nessun contatto tra insegnante e ragazzo fuori da IAinsieme. Nessun numero personale, nessun profilo social scambiato.</p></div></div>
       <div class="regola"><span class="spunta">✓</span><div><strong>Nessun account personale per i ragazzi</strong><p>Il ragazzo non ha mai un account personale, né sulla piattaforma né sugli strumenti di intelligenza artificiale. Entra in lezione con il link della classe, l'account è sempre del genitore, e ogni strumento passa dallo schermo condiviso dell'insegnante.</p></div></div>
-      <div class="regola"><span class="spunta">✓</span><div><strong>Insegnante con certificato penale</strong><p>Ogni insegnante ottiene il certificato penale del casellario, quello previsto dalla normativa antipedofilia, prima del primo incarico. Il primo insegnante sono io, Davide Caiazzo, e lo standard che ho fissato per me vale per chiunque arrivi dopo.</p></div></div>
+      <div class="regola"><span class="spunta">✓</span><div><strong>Insegnanti verificati al casellario giudiziale</strong><p>Prima del primo incarico chiediamo a ogni insegnante il certificato del casellario giudiziale previsto dalla normativa a tutela dei minori, e l'incarico parte solo se il documento è pulito. Il primo insegnante sono io, Davide Caiazzo, e lo standard che ho fissato per me vale per chiunque arrivi dopo.</p></div></div>
       <div class="regola"><span class="spunta">✓</span><div><strong>Dati del minore ridotti al minimo</strong><p>Raccogliamo solo nome, età e fascia di corso. Nessuna profilazione, nessun marketing rivolto al minore. In lezione insegniamo esplicitamente ai ragazzi a non condividere mai dati personali con strumenti di intelligenza artificiale.</p></div></div>
       <div class="regola"><span class="spunta">✓</span><div><strong>Tu vedi sempre cosa succede</strong><p>Dopo ogni lezione ricevi un report con cosa ha fatto tuo figlio, un esempio concreto del suo lavoro e un commento dell'insegnante.</p></div></div>
     </div>
@@ -79,16 +79,21 @@ fbq('track', 'PageView');
     <p class="microcopy"><span class="check">✓</span> Soddisfatti o rimborsati entro la prima lezione &nbsp;·&nbsp; <span class="check">✓</span> Massimo 8 ragazzi per classe</p>
     <div class="iscriviti-box" style="text-align:left">
       <h3 style="text-align:center">Preferisci parlarci prima? Lascia i tuoi dati</h3>
-      <p style="font-size:.94rem;color:var(--ink-soft);text-align:center">La prima classe parte martedì 29 settembre 2026 alle 18 e ha 8 posti, le iscrizioni si chiudono al riempimento. Se vuoi farci una domanda prima di iscrivere tuo figlio, lascia i tuoi dati e ti ricontattiamo entro un giorno lavorativo.</p>
+      <p style="font-size:.94rem;color:var(--ink-soft);text-align:center">Le prime classi partono tra fine settembre e inizio ottobre 2026, ogni classe ha 8 posti e le iscrizioni si chiudono al riempimento. Se vuoi farci una domanda prima di iscrivere tuo figlio, lascia i tuoi dati e ti ricontattiamo entro un giorno lavorativo.</p>
       <form onsubmit="return inviaIscrizione(this)">
         <label for="nome">Il tuo nome</label>
         <input id="nome" name="nome" type="text" required placeholder="Nome e cognome del genitore">
         <label for="email">La tua email</label>
         <input id="email" name="email" type="email" required placeholder="nome@esempio.it">
+        <label for="nome-figlio">Il nome di tuo figlio</label>
+        <input id="nome-figlio" name="nomefiglio" type="text" required placeholder="Il nome del ragazzo">
+        <label for="eta-figlio">La sua età</label>
+        <input id="eta-figlio" name="etafiglio" type="number" min="8" max="16" required placeholder="Da 8 a 16 anni">
         <label for="slot">La classe</label>
         <select id="slot" name="slot">
-          <option>Prima classe, ogni martedì alle 18, parte il 29 settembre 2026</option>
-          <option>Seconda classe, sabato alle 10, parte il 3 ottobre 2026 se la prima si riempie</option>
+          <option>Fascia 8/10, ogni sabato alle 10, prima lezione 3 ottobre 2026</option>
+          <option>Fascia 11/13, ogni martedì alle 18, prima lezione 29 settembre 2026</option>
+          <option>Fascia 14/16, ogni giovedì alle 18, prima lezione 1 ottobre 2026</option>
         </select>
         <button type="submit" class="btn grande">Iscrivo mio figlio</button>
       </form>
@@ -123,14 +128,14 @@ fbq('track', 'PageView');
 <script>
 function inviaIscrizione(f){
   if (typeof fbq === 'function') { fbq('track', 'Lead'); }
-  var corpo = "Buongiorno, vorrei iscrivere mio figlio al Livello 1 di IAinsieme, fascia 11/13.%0D%0A%0D%0ANome genitore, " + encodeURIComponent(f.nome.value) + "%0D%0AEmail, " + encodeURIComponent(f.email.value) + "%0D%0AClasse scelta, " + encodeURIComponent(f.slot.value);
-  window.location.href = "mailto:academy@davidecaiazzo.it?subject=" + encodeURIComponent("Iscrizione IAinsieme Livello 1 fascia 11/13") + "&body=" + corpo;
+  var corpo = encodeURIComponent("Buongiorno, vorrei iscrivere mio figlio al Livello 1 di IAinsieme.\n\nNome genitore, " + f.nome.value + "\nEmail, " + f.email.value + "\nNome del ragazzo, " + f.nomefiglio.value + "\nEt\u00e0 del ragazzo, " + f.etafiglio.value + "\nClasse scelta, " + f.slot.value);
+  window.location.href = "mailto:academy@davidecaiazzo.it?subject=" + encodeURIComponent("Iscrizione IAinsieme Livello 1") + "&body=" + corpo;
   return false;
 }
 </script>
 <script>
 document.addEventListener('click', function(e){
-  var a = e.target.closest('a[href*="#iscriviti"], a[href*="/offers/qzjqZZzy"]');
+  var a = e.target.closest('a[href*="#iscriviti"], a[href*="/offers/"]');
   if (a && typeof fbq === 'function') { fbq('track', 'InitiateCheckout'); }
 });
 </script>
