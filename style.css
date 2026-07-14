@@ -187,9 +187,9 @@ details.faq summary::after { content: '+'; font-size: 1.4rem; color: var(--cta);
 details.faq[open] summary::after { content: '–'; }
 details.faq .risposta { padding: 0 20px 18px; color: var(--ink-soft); font-size: .97rem; }
 
-/* Video founder reale, orizzontale 16/9 */
+/* Video founder reale, verticale 9/16, contenuto */
 .video-founder {
-  display: block; width: 100%; max-width: 640px; aspect-ratio: 16 / 9;
+  display: block; width: 100%; max-width: 315px; max-height: 560px;
   margin: 30px auto 0; border-radius: var(--radius);
   box-shadow: var(--shadow); background: #000;
 }
