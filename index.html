@@ -19,21 +19,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<!-- Meta Pixel -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window,document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '568941777677393');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=568941777677393&ev=PageView&noscript=1"/></noscript>
-<!-- End Meta Pixel -->
 </head>
 <body>
 
@@ -189,7 +174,7 @@ fbq('track', 'PageView');
         </select>
         <label class="consenso">
           <input type="checkbox" name="consensoprivacy" required>
-          <span>Dichiaro di essere il genitore o chi esercita la responsabilità genitoriale sul minore indicato, di aver letto l'<a href="privacy.html" target="_blank">informativa privacy</a> e acconsento al trattamento dei miei dati e di quelli del minore per gestire questa richiesta e l'eventuale iscrizione.</span>
+          <span>Dichiaro di essere il genitore o chi esercita la responsabilità genitoriale sul minore indicato e di aver letto l'<a href="privacy.html" target="_blank">informativa privacy</a> per questa richiesta.</span>
         </label>
         <button type="submit" class="btn grande">Voglio essere ricontattato</button>
       </form>
@@ -216,6 +201,8 @@ fbq('track', 'PageView');
       <strong>Documenti</strong>
       <a href="privacy.html">Informativa privacy</a>
       <a href="termini.html">Termini e condizioni</a>
+      <a href="https://docs.google.com/document/d/1qUNgRcZ0W9aZxutDu1Fv2k5aM6Nti4V0/edit">Privacy generale DC Academy</a>
+      <a href="https://docs.google.com/document/d/1PTTs2QFMqBtZaefLHPrrfMxJRnlGewih/edit">Cookie DC Academy</a>
     </div>
     <div class="legale">© 2026 DC Academy Srl. L'attestato IAinsieme è un riconoscimento privato di completamento del percorso, non un titolo di studio.</div>
   </div>
@@ -223,18 +210,10 @@ fbq('track', 'PageView');
 
 <script>
 function inviaIscrizione(f){
-  if (typeof fbq === 'function') { fbq('track', 'Lead'); }
   var corpo = encodeURIComponent("Buongiorno, vorrei iscrivere mio figlio al Livello 1 di IAinsieme.\n\nNome genitore, " + f.nome.value + "\nEmail, " + f.email.value + "\nNome del ragazzo, " + f.nomefiglio.value + "\nEt\u00e0 del ragazzo, " + f.etafiglio.value + "\nClasse scelta, " + f.slot.value);
   window.location.href = "mailto:academy@davidecaiazzo.it?subject=" + encodeURIComponent("Iscrizione IAinsieme Livello 1") + "&body=" + corpo;
   return false;
 }
 </script>
-<script>
-document.addEventListener('click', function(e){
-  var a = e.target.closest('a[href*="#iscriviti"], a[href*="/offers/"]');
-  if (a && typeof fbq === 'function') { fbq('track', 'InitiateCheckout'); }
-});
-</script>
-  <script src="https://sofia-chatbot.onrender.com/widget.js" data-bot="sofia" data-auto-open="true" data-delay="6000" defer></script>
 </body>
 </html>
